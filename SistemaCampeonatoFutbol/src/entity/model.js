@@ -1,0 +1,3 @@
+class campeonato {
+ constructor()   
+}

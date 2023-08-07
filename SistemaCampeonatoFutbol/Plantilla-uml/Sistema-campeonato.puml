@@ -1,8 +1,7 @@
 @startuml sistema de gestion campeonato de fútbol
 
 class Campeonato {
-nombre: 
-
+nombre: string 
 }
 
 class EquipoFutbol {
@@ -11,8 +10,9 @@ nombre : string
 fechaCreacion: date
 categoría: string
 escudo: imagen
-coloresRepresentativos: string
+coloresedelEquipo: string
 alineacion: number
+estretegia: string
 }
 
  class Jugador {
