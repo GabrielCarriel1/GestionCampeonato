@@ -31,8 +31,6 @@ númeroCamiseta: number
 class  Arbitro {
 nombres:
 apellidos:
-categoría:
-
 }
 
 class Partido  {
@@ -40,13 +38,14 @@ fechaLimite: date
 horario: date
 estadioAsignado: string
 resulatdo: number
-diasjuego: date 
+fechaPartido: date 
 }
 class Sistema {
 equiposParticipantes: number 
 partidosProgramados: number
 resulatdoPartidos: number
 estadisticas: string
+categoria: string 
 }
 
 
@@ -61,7 +60,11 @@ Partido <|-- Jugador
 
 Jugador "1" -- "1..*" EquipoFutbol
 EquipoFutbol "2" -- "1..*" Partido
+Estadio <|-- Partido
 
-
+EquipoFutbol <|-- Sistema
+Campeonato <|-- Sistema
+Partido <|-- Sistema
+Jugador <|-- Sistema
 
 @enduml

@@ -25,13 +25,42 @@ class EquipoFutbol {
   }
 }
 
+class Estadio {
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
+}
 class Jugador {
   constructor(nombres, apellidos, fechaNacimiento, posicion, numeroCamiseta) {
     this.nombres = nombres;
     this.apellidos = apellidos;
-    this.fechaNacimiento = fechaNacimiento;
+    this.fechaNacimiento = new Date(fechaNacimiento);
     this.posicion = posicion;
-    this.numeroCamiseta = numeroCamiseta;
+    this.numeroCamiseta = Number(numeroCamiseta);
   }
 }
-class Arbitro {}
+
+class Partido {
+  constructor(fechaLimite, horario, estadioAsignad, resultado, fechaPartido) {
+    this.fechaLimite = new Date(fechaLimite);
+    this.horario = horario;
+    this.estadioAsignad = estadioAsignad;
+    this.resultado = resultado;
+    this.fechaPartido = new Date(fechaPartido);
+  }
+}
+class Sistema {
+  constructor(
+    equiposParticipantes,
+    partidosProgramados,
+    resulatdoPartidos,
+    estadisticas,
+    categoria
+  ) {
+    this.equiposParticipantes = equiposParticipantes;
+    this.partidosProgramados = partidosProgramados;
+    this.resulatdoPartidos = resulatdoPartidos;
+    this.estadisticas = estadisticas;
+    this.categoria = categoria;
+  }
+}
