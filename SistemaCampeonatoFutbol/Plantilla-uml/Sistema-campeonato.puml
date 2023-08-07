@@ -1,7 +1,9 @@
 @startuml sistema de gestion campeonato de fútbol
 
+
 class Campeonato {
-nombre: string 
+nombre: string
+
 }
 
 class EquipoFutbol {
@@ -16,8 +18,6 @@ estretegia: string
 }
 class Estadio {
 nombre: string
-horario: string
-
 }
 
  class Jugador {
@@ -36,13 +36,19 @@ categoría:
 }
 
 class Partido  {
-fecha: date 
+fechaLimite: date 
 horario: date
-equiposParticipantes: number
 estadioAsignado: string
 resulatdo: number
-
+diasjuego: date 
 }
+class Sistema {
+equiposParticipantes: number 
+partidosProgramados: number
+resulatdoPartidos: number
+estadisticas: string
+}
+
 
 Campeonato <|-- EquipoFutbol
 Campeonato <|-- Jugador
