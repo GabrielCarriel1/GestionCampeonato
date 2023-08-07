@@ -1,3 +1,5 @@
 class campeonato {
- constructor()   
+  constructor(nombre) {
+    this.nombre = nombre;
+  }
 }
