@@ -64,3 +64,4 @@ class Sistema {
     this.categoria = categoria;
   }
 }
+export { campeonato, EquipoFutbol, Estadio, Jugador, Partido, Sistema };
