@@ -1,10 +1,32 @@
-button {
-  font-size: 14px;
-  font-weight: 600;
-  color: #95890b;
-  background-color: #ffffff;
-  padding: 10px 25px 10px 25px;
-  border-radius: 3px 3px 3px 3px;
-  margin-top: 20px;
-  transition: all 0.3s ease-out 0s;
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
+
+header,
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* Estilos para la sección de equipos y jugadores (por ejemplo) */
+.team-section {
+  margin: 20px;
+}
+
+.team-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Estilos para la sección de programación de partidos (por ejemplo) */
+.schedule-section {
+  margin: 20px;
+}
+
+/* Agrega más estilos según sea necesario */

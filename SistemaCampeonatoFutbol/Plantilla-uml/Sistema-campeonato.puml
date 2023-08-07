@@ -14,6 +14,11 @@ coloresedelEquipo: string
 alineacion: number
 estretegia: string
 }
+class Estadio {
+nombre: string
+horario: string
+
+}
 
  class Jugador {
 nombres: string
