@@ -10,9 +10,8 @@ login.addEventListener("submit", (event) => {
   );
   if (!cuentasRegistrada) {
     const mensajeError = document.querySelector("#login-mensaje-error");
-    mensajeError.textContent = "Ingrese una cotraseña o correo correctos!";
+    mensajeError.textContent = "Correo o Contraseña Incorrectos!";
   } else {
-    localStorage.setItem(login_success, JSON.stringify(cuentasRegistrada));
     window.location.href = "index.html";
   }
 });
