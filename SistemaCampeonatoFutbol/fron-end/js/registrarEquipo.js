@@ -11,39 +11,31 @@ document
       alert("Por favor, selecciona una imagen.");
       return;
     }
-
-    // Crear un nuevo objeto de equipo con los datos
     const nuevoEquipo = {
       nombre: nombreEquipo,
       imagen: URL.createObjectURL(imagenEquipoFile),
     };
 
-    // Obtener equipos registrados del localStorage
     const equiposRegistrados =
       JSON.parse(localStorage.getItem("equipos")) || [];
 
-    // Agregar el nuevo equipo a la lista de equipos registrados
     equiposRegistrados.push(nuevoEquipo);
 
-    // Guardar el array actualizado en el localStorage
     localStorage.setItem("equipos", JSON.stringify(equiposRegistrados));
 
-    // Actualizar la lista de equipos registrados en la página
     actualizarListaEquipos();
 
-    // Limpiar el campo de entrada de imagen
     imagenEquipoInput.value = "";
 
     alert(`Equipo "${nombreEquipo}" registrado con éxito.`);
     document.getElementById("form-registrar-equipos").reset();
   });
 
-// Función para actualizar la lista de equipos registrados en la página
 function actualizarListaEquipos() {
   const listaEquiposRegistrados = document.getElementById(
     "equipos-registrados"
   );
-  listaEquiposRegistrados.innerHTML = ""; // Limpiar la lista
+  listaEquiposRegistrados.innerHTML = "";
 
   const equiposRegistrados = JSON.parse(localStorage.getItem("equipos")) || [];
   equiposRegistrados.forEach(function (equipo) {
@@ -57,8 +49,8 @@ function actualizarListaEquipos() {
     const imagenEquipo = document.createElement("img");
     imagenEquipo.src = equipo.imagen;
     imagenEquipo.alt = "Escudo del Equipo";
-    imagenEquipo.style.maxHeight = "50px"; // Estilo opcional para ajustar el tamaño de la imagen
-    imagenEquipo.style.borderRadius = "50%"; // Redondear la imagen
+    imagenEquipo.style.maxHeight = "50px";
+    imagenEquipo.style.borderRadius = "50%";
 
     nuevoEquipo.appendChild(equipoInfo);
     nuevoEquipo.appendChild(imagenEquipo);
@@ -67,5 +59,4 @@ function actualizarListaEquipos() {
   });
 }
 
-// Llamar a la función para cargar los equipos al cargar la página
 window.onload = actualizarListaEquipos;
