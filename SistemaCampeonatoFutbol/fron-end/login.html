@@ -1,133 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="author" content="Muhamad Nauval Azhar" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta
-      name="description"
-      content="This is a login page template based on Bootstrap 5"
-    />
-    <title>Bootstrap 5 Login Page</title>
-    <link rel="stylesheet" href="./css/login.css" />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
-      crossorigin="anonymous"
-    />
-    <!-- FONTES -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="../fron-end/css/style.css" />
-
-    <!-- STYLE -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link rel="stylesheet" href="https://copafacil.com/assets/css/style.css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión</title>
     <link
       rel="stylesheet"
-      href="https://copafacil.com/assets/css/owl.carousel.min.css"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css"
-    />
-    <!-- SCRIPTS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-    <script src="https://copafacil.com/assets/js/owl.carousel.min.js"></script>
-    <script src="https://copafacil.com/assets/js/scripts.js"></script>
   </head>
-
   <body>
-    <div class="menu-responsivo">
-      <a href="#topo" class="suave">Inicio</a>
-      <a href="#caracteristicas" class="suave">Características</a>
-      <a href="#fale-conosco" class="suave">Contáctanos</a>
-    </div>
-    <header>
-      <div class="container">
-        <nav>
-          <a href="../fron-end/pag-principal.html">Inicio</a>
-          <a href="../fron-end/inicio.html">Contáctanos</a>
-        </nav>
-      </div>
-    </header>
-
-    <section class="h-100">
-      <div class="containers h-100">
-        <div class="row justify-content-sm-center h-100">
-          <div class="col-xxl-4 col-xl-5 col-lg-5 col-md-7 col-sm-9">
-            <div class="text-center my-5">
-              <img
-                src="../fron-end/imagenes/pngwing.com.png"
-                alt="logo"
-                width="130"
-              />
-            </div>
-
-            <div class="card shadow-lg">
-              <div class="card-body p-5">
-                <h1 class="fs-4 card-title fw-bold mb-4">Login</h1>
-                <form
-                  method="POST"
-                  class="needs-validation"
-                  novalidate=""
-                  autocomplete="off"
-                >
-                  <div class="mb-3">
-                    <label class="mb-2 text-muted" for="email"
-                      >Dirección de correo electrónico</label
-                    >
-                    <input
-                      id="email"
-                      type="email"
-                      class="form-control"
-                      name="email"
-                      value=""
-                      required
-                      autofocus
-                    />
-                    <div class="invalid-feedback">Email is invalid</div>
-                  </div>
-
-                  <div class="mb-3">
-                    <div class="mb-2 w-100">
-                      <label class="text-muted" for="password"
-                        >Contraseña</label
-                      >
-                    </div>
-                    <input
-                      id="password"
-                      type="password"
-                      class="form-control"
-                      name="password"
-                      required
-                    />
-                    <div class="invalid-feedback">Password is required</div>
-                  </div>
-
-                  <div class="d-flex align-items-center">
-                    <button type="submit" class="btn btn-primary ms-auto">
-                      Acceder
-                    </button>
-                    <a href="registro.html" class="btn btn-success"
-                      >Registrarse</a
-                    >
-                  </div>
-                </form>
-              </div>
+    <div class="container mt-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h2 class="card-title text-center">Iniciar Sesión</h2>
+              <form id="form-login">
+                <div class="mb-3">
+                  <label for="email" class="form-label"
+                    >Correo electrónico</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="id-email"
+                    name="email"
+                    placeholder="@email.com"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="password" class="form-label">Contraseña</label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="id-password"
+                    name="password"
+                    placeholder="Contraseña"
+                    required
+                  />
+                </div>
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary">
+                    Iniciar Sesión
+                  </button>
+                </div>
+                <p id="login-mensaje-error" class="text-danger mt-2"></p>
+              </form>
+              <p class="text-center mt-3">
+                ¿No tienes una cuenta? <a href="registro.html">Regístrate</a>
+              </p>
             </div>
           </div>
-          <div class="">Copyright 2023</div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <script src="../fron-end/js/login.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- Agrega aquí tu script de manejo de inicio de sesión si es necesario -->
+    <script src="js/login.js"></script>
   </body>
 </html>

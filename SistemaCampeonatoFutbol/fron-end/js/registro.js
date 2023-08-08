@@ -10,15 +10,14 @@ registro.addEventListener("submit", (event) => {
     (usuario) => usuario.email === email
   );
   if (!usuariosRegistrados) {
-    usuariosRegistrados.push({
+    usuarios.push({
       username: username.value,
       email: email.value,
       password: password.value,
     });
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
-    alert("Success");
+    window.location.href = "login.html";
   } else {
     const mensajeError = document.querySelector("#mensaje-error");
     mensajeError.textContent = "Este correo electrónico ya está registrado.";
