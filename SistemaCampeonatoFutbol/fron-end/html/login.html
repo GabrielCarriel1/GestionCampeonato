@@ -14,20 +14,28 @@
     <div class="container mt-5">
       <div class="row justify-content-center">
         <div class="col-md-6">
+          <nav
+            wire:id="esPhVixuBxfFvqZCw4zJ"
+            x-data="{ open: false }"
+            class="bg-gray-900 border-b border-gray-100 shadow"
+          >
+            <div class="menu"><a href="index.html">panel </a></div>
+          </nav>
+
           <div class="card">
             <div class="card-body">
               <h2 class="card-title text-center">Iniciar Sesión</h2>
               <form id="form-login">
                 <div class="mb-3">
                   <label for="email" class="form-label"
-                    >Correo electrónico</label
+                    >Nombre de Usuario</label
                   >
                   <input
-                    type="email"
+                    type="text"
                     class="form-control"
                     id="id-email"
                     name="email"
-                    placeholder="@email.com"
+                    placeholder="Usuario"
                     required
                   />
                 </div>
@@ -66,7 +74,7 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <!-- Agrega aquí tu script de manejo de inicio de sesión si es necesario -->
-    <script src="js/login.js"></script>
+
+    <script src="../js/login.js"></script>
   </body>
 </html>
