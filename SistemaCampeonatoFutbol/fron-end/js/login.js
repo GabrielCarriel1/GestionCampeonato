@@ -12,7 +12,7 @@ login.addEventListener("submit", (event) => {
     const mensajeError = document.querySelector("#login-mensaje-error");
     mensajeError.textContent = "Ingrese una cotraseña o correo correctos!";
   } else {
-    console.log("hola");
+    localStorage.setItem(login_success, JSON.stringify(cuentasRegistrada));
     window.location.href = "index.html";
   }
 });

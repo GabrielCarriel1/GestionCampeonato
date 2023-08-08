@@ -39,13 +39,57 @@
           Organiza partidos emocionantes y vive la pasión del fútbol con nuestro
           sistema de gestión.
         </p>
-        <a href="login.html" class="btn btn-primary btn-lg btn-custom"
-          >Crear Campeonato</a
+        <button
+          type="button"
+          class="btn btn-primary btn-lg btn-custom"
+          data-toggle="modal"
+          data-target="#loginModal"
         >
+          Crear Campeonato
+        </button>
       </div>
       <footer class="text-center">
         <p>&copy; 2023 Sistema de Gestión de Campeonatos de Fútbol</p>
       </footer>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="loginModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="loginModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loginModalLabel">Inicia Sesión</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Debes iniciar sesión primero para crear un campeonato.
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cerrar
+            </button>
+            <a href="login.html" class="btn btn-primary">Iniciar Sesión</a>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

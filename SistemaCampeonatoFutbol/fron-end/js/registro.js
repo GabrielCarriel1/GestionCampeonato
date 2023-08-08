@@ -7,9 +7,14 @@ registro.addEventListener("submit", (event) => {
 
   const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
   const usuariosRegistrados = usuarios.find(
-    (usuario) => usuario.email === email
+    (usuario) => usuario.email === email.value
   );
-  if (!usuariosRegistrados) {
+
+  const mensajeError = document.querySelector("#mensaje-error");
+
+  if (usuariosRegistrados !== undefined) {
+    mensajeError.textContent = "Este correo electrónico ya está registrado.";
+  } else {
     usuarios.push({
       username: username.value,
       email: email.value,
@@ -18,8 +23,5 @@ registro.addEventListener("submit", (event) => {
 
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     window.location.href = "login.html";
-  } else {
-    const mensajeError = document.querySelector("#mensaje-error");
-    mensajeError.textContent = "Este correo electrónico ya está registrado.";
   }
 });

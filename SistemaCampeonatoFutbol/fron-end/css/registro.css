@@ -1,5 +1,7 @@
-.mensaje-error {
-  font-size: 14px;
-  font-weight: bold;
-  margin-top: 8px;
+body {
+  background-image: url("../image/15858275_5687688 (1).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #f2f2f2;
 }
