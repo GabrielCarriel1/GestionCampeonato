@@ -14,7 +14,6 @@ categoría: string
 escudo: imagen
 coloresedelEquipo: string
 alineacion: number
-estretegia: string
 }
 class Estadio {
 nombre: string
@@ -45,7 +44,6 @@ equiposParticipantes: number
 partidosProgramados: number
 resulatdoPartidos: number
 estadisticas: string
-categoria: string 
 }
 
 

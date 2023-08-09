@@ -1,24 +1,22 @@
 document
-  .getElementById("form-registrar-equipos")
+  .querySelector("#form-registrar-equipos")
   .addEventListener("submit", function (event) {
     event.preventDefault();
 
     const nombreEquipo = document.querySelector("#nombre-equipo").value;
-    const sedeEquipo = document.querySelector("#id-sede");
-    const ciudadEquipo = document.querySelector("#id-ciudad");
-    const categoriaEquipo = document.querySelector("#id-categoria");
+    const sedeEquipo = document.querySelector("#id-sede").value;
+    const ciudadEquipo = document.querySelector("#id-ciudad").value;
+    const categoriaEquipo = document.querySelector("#id-categoria").value;
     const imagenEquipoInput = document.querySelector("#id-escudo-equipo");
     const imagenEquipoFile = imagenEquipoInput.files[0];
+    const colorEquipo = document.querySelector("#color-equipo").value;
 
-    if (imagenEquipoFile) {
-      alert("imagen seleccionada");
-      return;
-    }
     const nuevoEquipo = {
       nombre: nombreEquipo,
       sede: sedeEquipo,
       ciudad: ciudadEquipo,
       categoria: categoriaEquipo,
+      color: colorEquipo,
       imagen: URL.createObjectURL(imagenEquipoFile),
     };
 
@@ -26,11 +24,9 @@ document
       JSON.parse(localStorage.getItem("equipos")) || [];
 
     equiposRegistrados.push(nuevoEquipo);
-
     localStorage.setItem("equipos", JSON.stringify(equiposRegistrados));
 
     actualizarListaEquipos();
-
     imagenEquipoInput.value = "";
 
     alert(`Equipo "${nombreEquipo}" registrado con éxito.`);
